@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>显示秒杀商品</title>
+</head>
+<body>
+
+<p th:text="'goods_name：' + ${goodsName}"/>
+<p th:text="'goods_price: ' + ${goodsPrice}"/>
+<p th:text="'goods_stock: ' + ${goodsStock}"/>
+
+<div class="col-md-5">
+    <button class="btn btn-primary btn-block"  onclick="buy()">抢购</button>
+</div>
+
+</body>
+<script>
+function buy() {
+    window.location.href='/goods/buy';
+}
+
+</script>
+</html>
